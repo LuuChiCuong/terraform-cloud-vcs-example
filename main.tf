@@ -25,7 +25,7 @@ resource "aws_instance" "ansible_server" {
   # Zero-downtime: create the replacement before destroying the old instance
   # when a force-new attribute (like ami) changes.
   tags = {
-    Name = "CICD-EC2-02"
+    Name = "CICD-EC2-03"
   }
   lifecycle {
     create_before_destroy = true

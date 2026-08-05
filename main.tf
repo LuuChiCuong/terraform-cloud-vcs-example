@@ -19,7 +19,8 @@ data "aws_ami" "ami" {
 
 resource "aws_instance" "ansible_server" {
   ami           = data.aws_ami.ami.id
-  instance_type = "t3.small"
+  # instance_type = "t3.small"
+  instance_type = "t3.micro"
 
   # Zero-downtime: create the replacement before destroying the old instance
   # when a force-new attribute (like ami) changes.
